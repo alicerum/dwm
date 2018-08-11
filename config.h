@@ -59,7 +59,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-b", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "tilix", NULL };
+static const char *termcmd[]  = { "urxvt256c", NULL };
 static const char *lockcmd[] = { "i3lock", "-c", "000000", NULL };
 
 static const char pulsename[] = "alsa_output.pci-0000_00_1b.0.analog-stereo";
