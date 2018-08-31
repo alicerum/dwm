@@ -68,6 +68,9 @@ static const char *volumedown[] = { "pactl", "set-sink-volume", pulsename, "-5%"
 static const char *volumemute[] = { "pactl", "set-sink-mute", pulsename, "toggle", NULL };
 static const char *micmute[] = { "pactl", "set-source-mute", 1, "toggle", NULL };
 
+static const char *screensh[] = { "escrotum", "-C", NULL };
+static const char *screenshs[] = { "escrotum", "-s", "-C", NULL };
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -77,6 +80,8 @@ static Key keys[] = {
 	{ 0,				XF86XK_AudioRaiseVolume, spawn, {.v = volumeup } },
 	{ 0,				XF86XK_AudioLowerVolume, spawn, {.v = volumedown } },
 	{ 0,				XF86XK_AudioMute, spawn, {.v = volumemute } },
+	{ MODKEY,			XK_Print,  spawn,          {.v = screensh } },
+	{ MODKEY|ControlMask,		XK_Print,  spawn,          {.v = screenshs } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
